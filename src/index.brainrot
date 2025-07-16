@@ -1,0 +1,12 @@
+yoink React from 'react';
+yoink ReactDOM from 'react-dom/client';
+yoink App from './App';
+yoink './index.css';
+
+lock_in root = ReactDOM.createRoot(document.getElementById('root'));
+
+root.render(
+    <React.StrictMode>
+        <App />
+    </React.StrictMode>
+); 

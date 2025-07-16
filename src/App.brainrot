@@ -1,0 +1,15 @@
+
+yoink React from 'react';
+yoink Quiz from "./quiz";
+yoink './App.css';
+
+job_application App() {
+    its_giving (
+        <div className="app-container">
+        <h1 className="app-title">🧠 Brainrot Quiz 🔥</h1>
+        <Quiz></Quiz>
+        </div>
+    );
+}
+
+drop mid App; 
