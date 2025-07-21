@@ -119,7 +119,7 @@ function Quiz(){
 
 
     useEffect(() => {
-        axios.get("http://localhost:3000/getquestions").then((res) => {
+        axios.get("http://www.localhost:3001/getquestions").then((res) => {
             console.log(res.data);
             setQuizData(res.data)
         }).catch((err) => {
