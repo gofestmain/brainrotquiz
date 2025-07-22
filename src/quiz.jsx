@@ -2,110 +2,6 @@ import React, { useState, useEffect } from "react";
 import './quiz.css';
 import axios from "axios";
 
-// const quizData = [
-//     {
-//         question: "What does it mean when someone says 'no cap'?",
-//         answers: ["No hat", "No limit", "Not lying", "No capture"],
-//         correct: 2
-//     },
-//     {
-//         question: "If someone has 'rizz', what do they have?",
-//         answers: ["Money", "Charisma", "A disease", "Good grades"],
-//         correct: 1
-//     },
-//     {
-//         question: "What is Joshua blocks favorite phrase?",
-//         answers: ["Put the fries in the bag", "How's it going!", "Fall seven times, stand up eight..", "Being quiet"],
-//         correct: 0
-//     },
-//     {
-//         question: "Someone who's 'down bad' is...",
-//         answers: ["Feeling sick", "Underground", "Desperately attracted to someone", "Having a bad day"],
-//         correct: 2
-//     },
-//     {
-//         question: "What does 'bussin' mean?",
-//         answers: ["Taking the bus", "Really good/delicious", "Being busy", "Making noise"],
-//         correct: 1
-//     },
-//     {
-//         question: "If you're 'catching Ls', you're...",
-//         answers: ["Playing baseball", "Taking losses", "Learning languages", "Catching lizards"],
-//         correct: 1
-//     },
-//     {
-//         question: "What's a 'sigma male'?",
-//         answers: ["A Greek letter", "A lone wolf type", "A mathematician", "A type of fish"],
-//         correct: 1
-//     },
-//     {
-//         question: "Which group popularized the phrase 'Full Send'?",
-//         answers: ["NELK", "FAZE", "Optic", "AMP"],
-//         correct: 0
-//     },
-//     {
-//         question: "What does 'default' mean?",
-//         answers: ["Middle", "Mediocre/average", "Midnight", "Midterm"],
-//         correct: 1
-//     },
-//     {
-//         question: "If something 'slaps', it...",
-//         answers: ["Hits you", "Is really good", "Makes noise", "Is violent"],
-//         correct: 1
-//     },
-//     {
-//         question: "What's the meaning of 'cope'?",
-//         answers: ["A type of rope", "Deal with something poorly", "Copy something", "Cooperate"],
-//         correct: 1
-//     },
-//     {
-//         question: "What is Kevin gates greatest accomplishment?",
-//         answers: ["2 Phones", "Wearing a furry hat", "Start a car with his bare hands", "Playing video games"],
-//         correct: 2
-//     },
-//     {
-//         question: "What does 'touch grass' mean?",
-//         answers: ["Garden work", "Go outside/get offline", "Play sports", "Be environmental"],
-//         correct: 1
-//     },
-//     {
-//         question: "Which of the AMP members levy a huge tax?",
-//         answers: ["Duke deniss", "Fanum", "Kai", "NAthan B"],
-//         correct: 1
-//     },
-//     {
-//         question: "What phrase is Haliey Welch most famous for?",
-//         answers: ["Skibibi", "The gym hurts", "Forgot about dat doi", "Hawk Tuah"],
-//         correct: 3
-//     },
-//     {
-//         question: "Finish the phrase: 'BBL ....'",
-//         answers: ["Livy dun", "Obama", "Drake", "Nicky minaj"],
-//         correct: 2
-//     },
-//     {
-//         question: "What does 'based' mean?",
-//         answers: ["Has a foundation", "Admirable/not caring what others think", "Military base", "Basic"],
-//         correct: 1
-//     },
-//     {
-//         question: "Who does every girl want?",
-//         answers: ["Henry cavill", "Duke dennis", "Kai cenat", "Adin ross"],
-//         correct: 1
-//     },
-//     {
-//         question: "What's a 'vibe check'?",
-//         answers: ["Testing vibrations", "Assessing the mood/energy", "Checking your phone", "A medical exam"],
-//         correct: 1
-//     },
-//     {
-//         question: "Who killed john pork",
-//         answers: ["Tim cheese", "Rizzler", "Bob bacon", "Simon claw"],
-//         correct: 0
-//     }
-// ];
-
-
 
 function Quiz(){
 
@@ -119,7 +15,7 @@ function Quiz(){
 
 
     useEffect(() => {
-        axios.get("http://www.localhost:3001/getquestions").then((res) => {
+        axios.get("http://api.brainrotquiz.me/getquestions").then((res) => {
             console.log(res.data);
             setQuizData(res.data)
         }).catch((err) => {

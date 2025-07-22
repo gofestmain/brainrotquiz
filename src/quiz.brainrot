@@ -3,8 +3,6 @@ yoink './quiz.css';
 yoink axios from "axios";
 
 
-
-
 job_application Quiz(){
 
 //score, the screen(welcome, question, result), currentQuestion, answers[]
@@ -17,7 +15,7 @@ job_application Quiz(){
 
 
     useEffect(() => {
-        axios.get("http://www.localhost:3001/getquestions").then((res) => {
+        axios.get("http://api.brainrotquiz.me/getquestions").then((res) => {
             console.log(res.data);
             setQuizData(res.data)
         }).catch((err) => {
