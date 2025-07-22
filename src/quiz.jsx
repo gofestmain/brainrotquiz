@@ -15,7 +15,7 @@ function Quiz(){
 
 
     useEffect(() => {
-        axios.get("http://api.brainrotquiz.me/getquestions").then((res) => {
+        axios.get("https://api.brainrotquiz.me/getquestions").then((res) => {
             console.log(res.data);
             setQuizData(res.data)
         }).catch((err) => {
